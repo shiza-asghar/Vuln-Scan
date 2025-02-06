@@ -1,71 +1,74 @@
-# vuln-scan README
+# 🚀 VSCode Vulnerability Scanner  
 
-This is the README for your extension "vuln-scan". After writing up a brief description, we recommend including the following sections.
-
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+A **VSCode extension** that **scans for security vulnerabilities** in **C/C++, Python, JavaScript, and TypeScript** code and underlines potential issues like syntax errors. It also provides **quick fixes** for common vulnerabilities.  
 
 ---
 
-## Following extension guidelines
+## ✨ Features  
+✅ **Real-time Vulnerability Detection** – Scans code on **save & edit**.  
+✅ **Supports Multiple Languages** – Works with **C/C++, Python, JavaScript, and TypeScript**.  
+✅ **Underlines Vulnerable Code** – Similar to **syntax errors** in VSCode.  
+✅ **Quick Fixes** – Provides **fix suggestions** for common vulnerabilities.  
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+---
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+## 🔧 Installation  
+1. Clone the repository:  
+   ```sh
+   git clone https://github.com/yourusername/vscode-vulnerability-scanner.git
+   cd vscode-vulnerability-scanner
+   ```  
+2. Install dependencies:  
+   ```sh
+   npm install
+   ```  
+3. Open in **VSCode** and press `F5` to launch the extension in a new window.  
 
-## Working with Markdown
+---
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+## 🚀 How to Use  
+1. Open a **C/C++, Python, JavaScript, or TypeScript** file in VSCode.  
+2. Make **edits** or **save** the file to trigger a security scan.  
+3. **Vulnerable lines** will be **underlined in red**.  
+4. Right-click the highlighted code and select **Quick Fix** to apply a suggested fix.  
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+---
 
-## For more information
+## 🛠 Supported Vulnerability Scanners  
+| Language      | Scanner  | Fixes Provided? |
+|--------------|----------|----------------|
+| **C/C++**    | `cppcheck`  | ✅ Yes |
+| **Python**   | `bandit`  | ✅ Yes |
+| **JavaScript/TypeScript** | `eslint` | ✅ Yes |
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+---
 
-**Enjoy!**
+## 🔍 Example Vulnerabilities & Fixes  
+| Vulnerability | Language | Auto Fix |
+|--------------|----------|----------|
+| `gets()` function (unsafe input) | C/C++ | ✅ Replaces with `fgets()` |
+| `eval()` usage | Python | ✅ Replaces with `safe_eval()` |
+| `innerHTML` usage | JavaScript | ✅ Replaces with `textContent` |
+
+---
+
+## ⚠️ Requirements  
+Make sure the following tools are installed for full functionality:  
+- **C/C++:** `cppcheck` → Install via `sudo apt install cppcheck` (Linux)  
+- **Python:** `bandit` → Install via `pip install bandit`  
+- **JavaScript/TypeScript:** `eslint` → Install via `npm install -g eslint`  
+
+---
+
+## 🛠 Development & Debugging  
+1. Open the project in **VSCode**.  
+2. Press `F5` to launch a **new VSCode window** with the extension activated.  
+3. Open the **"Output" panel** (`View → Output`) and select **"Vulnerability Scanner"** for logs.  
+
+---
+
+## 💡 Future Improvements  
+🔹 Support for **more languages** (e.g., Java, Go, Rust)  
+🔹 **Custom rule definitions** for vulnerability scanning  
+🔹 **Advanced AI-powered fixes** using LLMs  
+
